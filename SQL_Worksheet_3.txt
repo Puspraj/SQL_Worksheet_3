@@ -1,0 +1,34 @@
+1>Answer: create table customers(Customer_number Int, customer_name Varchar(20), contactLastName Varchar(10), 
+          >contactFirstName Varchar(15), phone Varchar(12), addressLine1 Varchar(25),addressLine2 Varchar(25),
+          >city Varchar(20), state Varchar(20), postalCode Int, country Varchar(15), saleRepemployeNumber Int,
+          >creditLimit Int);
+
+2>Answer: create table orders(orderNumber Int, orderDate Varchar(15),requiredDate Varchar(15), shippingDate Varchar(15),
+          >status Varchar(20), comments Varchar(20), customerNumber Varchar(12));
+
+3>Answer: select * from orders;
+
+4>Answer: select comments from orders;
+
+5>Answer: select orderDate, orderNumber from orders;
+
+6>Answer: select employeNumber,lastName,firstName from employees;
+
+7>Answer: select orderNumber,customerName form customer Left outer join orders ON customerNumber=customerNumber;
+
+8>Answer: select customerName,salesRepEmployeeNumber from customers;
+
+9>Answer: select paymentDate,amount from payments;
+
+10>Answer:select productName,MSRP,productDescription from products;
+
+11>Answer: select productName,productDescription from products ORDER BY productName ASC;
+
+12>Answer: select city MAX(orderNumber) from customer Right outer join orders ON customerNumber=customerNumber;
+
+13>Answer: select state MAX(customerNumber) from customers;
+
+14>Answer: select employeeNumber, CONCAT(firstName, " ", lastName) AS fullName from employees;
+
+15>Answer: select orderNumber,customerName, amount AS "Total amount paid", from orders INNER JOIN customer
+          >ON customerNumber=customerNumber INNER JOIN payments ON customerNumber=customerNumber;
